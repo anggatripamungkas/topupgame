@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamingZone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Left section: menu icon + logo -->
+            <div class="navbar-left">
+                <button class="menu-icon" aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="white">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                    </svg>
+                </button>
+                <a href="#" class="navbar-logo">GamingZone</a>
+            </div>
+
+            <!-- Search and Register -->
+            <div class="navbar-search">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <button id="searchButton" class="search-icon" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+                            <path d="M15.5 14h-.79l-.28-.27a6.518 6.518 0 001.48-5.34C15.15 5.59 12.53 3 9.25 3S3.35 5.59 3.09 8.89A6.51 6.51 0 009.25 15c1.61 0 3.09-.59 4.24-1.56l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6.25 0C7.01 14 5 11.99 5 9.25S7.01 4.5 9.25 4.5 13.5 6.51 13.5 9.25 11.49 14 9.25 14z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button id="registerButton" class="button">Daftar</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <section class="games">
+            <h2>Games</h2>
+            <div class="game-cards">
+                <div class="game-card">
+                    <img src="./img/ml.jpg" alt="Mobile Legends: Bang Bang">
+                    <span>Mobile Legends: Bang Bang</span>
+                </div>
+                <div class="game-card">
+                    <img src="./img/pubg.jpg" alt="PUBG Mobile">
+                    <span>PUBG Mobile</span>
+                </div>
+                <div class="game-card">
+                    <img src="./img/ff.jpg" alt="Free Fire">
+                    <span>Free Fire</span>
+                </div>
+                <div class="game-card">
+                    <img src="./img/genshin.jpg" alt="Genshin Impact">
+                    <span>Genshin Impact</span>
+                </div>
+                <div class="game-card">
+                    <img src="./img/cod.webp" alt="Call of Duty Mobile">
+                    <span>Call of Duty Mobile</span>
+                </div>
+                <div class="game-card">
+                    <img src="./img/valorant.jpeg" alt="VALORANT">
+                    <span>VALORANT</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="vouchers">
+            <h2>Voucher</h2>
+            <div class="voucher-cards">
+                <div class="voucher-card">
+                    <img src="./img/roblox.jpeg" alt="Roblox Gift Card">
+                    <span>Roblox Gift Card</span>
+                </div>
+                <div class="voucher-card">
+                    <img src="./img/playstation.png" alt="PlayStation Store Gift Card">
+                    <span>PlayStation Store Gift Card</span>
+                </div>
+                <div class="voucher-card">
+                    <img src="./img/garena.jpg" alt="Garena Shells">
+                    <span>Garena Shells</span>
+                </div>
+                <div class="voucher-card">
+                    <img src="./img/minecraft.jpg" alt="Minecraft">
+                    <span>Minecraft</span>
+                </div>
+                <div class="voucher-card">
+                    <img src="./img/google play.png" alt="Google Play Voucher">
+                    <span>Google Play Voucher</span>
+                </div>
+                <div class="voucher-card">
+                    <img src="./img/xbox.png" alt="Xbox Gift Card">
+                    <span>Xbox Gift Card</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./src/script.js"></script>
+
+    <!-- Modal / Sidebar Pendaftaran -->
+    <div id="registerModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Daftar di <span class="highlight">GamingZone</span> Sekarang!</h2>
+            <p>Jadilah yang pertama mendapatkan informasi promo, diskon, dan kemudahan top-up.</p>
+            <button id="startRegister" class="btn blue">Daftar Sekarang!</button>
+            <button id="loginInstead" class="btn white">Masuk</button>
+        </div>
+    </div>
+
+</body>
+</html>
