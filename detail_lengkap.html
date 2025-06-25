@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Legends - GamingZone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles3.css" />
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Left section: menu icon + logo -->
+            <div class="navbar-left">
+                <button class="menu-icon" aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="white">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                    </svg>
+                </button>
+                <a href="index.html" class="navbar-logo">GamingZone</a>
+            </div>
+
+            <!-- Search and Register -->
+            <div class="navbar-search">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <button id="searchButton" class="search-icon" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="white">
+                            <path d="M15.5 14h-.79l-.28-.27a6.518 6.518 0 001.48-5.34C15.15 5.59 12.53 3 9.25 3S3.35 5.59 3.09 8.89A6.51 6.51 0 009.25 15c1.61 0 3.09-.59 4.24-1.56l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6.25 0C7.01 14 5 11.99 5 9.25S7.01 4.5 9.25 4.5 13.5 6.51 13.5 9.25 11.49 14 9.25 14z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button id="registerButton" class="button">Daftar</button>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Main Section -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="game-header">
+        <img src="./img/ml.jpg" alt="Mobile Legends" />
+        <div class="game-info">
+          <h2>Mobile Legends: Bang Bang</h2>
+          <p>Moonton</p>
+        </div>
+      </div>
+
+      <div class="form-input">
+        <label>User ID</label>
+        <input type="text" placeholder="Masukkan User ID" />
+      </div>
+      <div class="form-input">
+        <input type="text" placeholder="( Zone ID )" />
+      </div>
+      <div class="form-input">
+        <label>Kontak Pembeli</label>
+        <input type="email" placeholder="Masukkan Email" />
+      </div>
+      <div class="form-input">
+        <input type="tel" placeholder="Nomor Telepon (Opsional)" />
+      </div>
+    </div>
+
+
+    <!-- Diamond & Voucher Section -->
+    <div class="main-content">
+    <div class="voucher-card" id="voucher-113">
+        <img src="./img/diamondml.webp" alt="113 Diamonds" />
+        <p>113 Diamonds (102 + 11)<br />Rp. 31.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-229">
+        <img src="./img/diamondml.webp" alt="229 Diamonds" />
+        <p>229 Diamonds (207 + 22)<br />Rp. 63.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-301">
+        <img src="./img/diamondml.webp" alt="301 Diamonds" />
+        <p>301 Diamonds (261 + 40)<br />Rp. 82.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-408">
+        <img src="./img/diamondml.webp" alt="408 Diamonds" />
+        <p>408 Diamonds (367 + 41)<br />Rp. 111.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-512">
+        <img src="./img/diamondml.webp" alt="512 Diamonds" />
+        <p>512 Diamonds (461 + 51)<br />Rp. 140.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-601">
+        <img src="./img/diamondml.webp" alt="601 Diamonds" />
+        <p>601 Diamonds (533 + 68)<br />Rp. 161.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-875">
+        <img src="./img/diamondml.webp" alt="875 Diamonds" />
+        <p>875 Diamonds (774 + 101)<br />Rp. 232.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-1050">
+        <img src="./img/diamondml.webp" alt="1050 Diamonds" />
+        <p>1050 Diamonds (933 + 117)<br />Rp. 280.000</p>
+    </div>
+
+    <!-- Special vouchers -->
+    <div class="voucher-card" id="voucher-twilight">
+        <img src="./img/twilightpass.webp" alt="Twilight Pass" />
+        <p>Twilight Pass<br />Rp. 150.000</p>
+    </div>
+    <div class="voucher-card" id="voucher-weekly">
+        <img src="./img/weeklyml.jpg" alt="Weekly Diamond Pass" />
+        <p>Weekly Diamond Pass<br />Rp. 27.500</p>
+    </div>
+    </div>
+
+  </div>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Pembayaran</h2>
+        <div id="paymentDetails"></div> <!-- Menampilkan rincian pembayaran -->
+        
+        <!-- Daftar metode pembayaran -->
+        <div class="payment-option">
+            <img src="./img/qris.webp" alt="QRIS" />
+            <p>QRIS</p>
+        </div>
+        <div class="payment-option">
+            <img src="./img/gopay.jpg" alt="GoPay" />
+            <p>GoPay</p>
+        </div>
+        <div class="payment-option">
+            <img src="./img/dana.jpg" alt="DANA" />
+            <p>DANA</p>
+        </div>
+        <div class="payment-option">
+            <img src="./img/ovo.webp" alt="OVO" />
+            <p>OVO</p>
+        </div>
+        <div class="payment-option">
+            <img src="./img/pulsa.png" alt="Pulsa" />
+            <p>Pulsa</p>
+        </div>
+        <div class="payment-option">
+            <img src="./img/bank.png" alt="Bank Transfer" />
+            <p>Bank Transfer</p>
+        </div>
+        
+        <!-- Tombol Tutup -->
+        <button class="close-btn" onclick="closeModal()">Tutup</button>
+    </div>
+</div>
+
+
+  <script src="./src/script.js"></script>
+</body>
+</html>

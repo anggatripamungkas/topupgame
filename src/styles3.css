@@ -1,0 +1,392 @@
+/* === RESET & GLOBAL === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: white;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1d4ed8;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Left section: icon + logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.menu-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Navbar Search Styling */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-wrapper input {
+  padding: 10px 40px 10px 15px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #0f3a9e;
+  color: white;
+  font-size: 14px;
+  width: 250px;
+  transition: border 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  border-color: #66ccff;
+}
+
+/* Search Icon Button */
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-icon svg {
+  fill: white;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease, fill 0.3s ease;
+}
+
+.search-icon:hover svg {
+  transform: scale(1.2);
+  fill: #66ccff;
+}
+
+/* Button styling */
+.navbar-search .button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #0f3a9e;
+  border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-search .button:hover {
+  background-color: #335fcc;
+}
+
+/* === CONTAINER === */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #0f172a;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  flex: 1;
+  padding: 2rem;
+  background-color: #0e1b33;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.sidebar img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.sidebar h2 {
+  margin: 1rem 0 0.5rem;
+}
+
+.sidebar p {
+  margin-bottom: 1.5rem;
+}
+
+/* === FORM INPUT === */
+.form-input {
+  margin-bottom: 1rem;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3b82f6;
+  background-color: #1e293b;
+  color: white;
+}
+
+/* === MAIN CONTENT / VOUCHERS === */
+.main-content {
+  flex: 2;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+/* === VOUCHER CARD === */
+.voucher-card {
+  background-color: #1e40af;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.voucher-card:hover {
+  transform: scale(1.03);
+  background-color: #2563eb;
+}
+
+.voucher-card img {
+  width: 100%;
+  
+  border-radius: 6px;
+}
+
+/* === RESPONSIVE MEDIA QUERY === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .main-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-search {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .search-wrapper input {
+    width: 100%;
+  }
+
+  .navbar-search .button {
+    width: 100%;
+  }
+
+  .game-cards, .voucher-cards {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #1e293b;
+  padding: 40px;
+  border-radius: 15px;
+  color: white;
+  width: 400px;  /* Lebar modal */
+  text-align: left;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#paymentDetails {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Payment Option */
+.payment-option {
+  display: flex;
+  justify-content: flex-start; /* Gambar di sebelah kiri, teks di kanan */
+  align-items: center;
+  gap: 15px; /* Jarak antara gambar dan teks */
+  margin-bottom: 15px; /* Menambahkan jarak antar pilihan */
+  transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi pada warna */
+}
+
+.payment-option:hover {
+  background-color: #f0f0f0; /* Memberikan efek hover */
+  border-radius: 5px;
+}
+
+.payment-option:hover p {
+  color: black; /* Mengubah warna teks menjadi hitam saat hover */
+}
+
+.payment-option img {
+  width: 40px;
+  height: 40px;
+}
+
+.payment-option p {
+  margin: 0;
+  font-size: 16px; /* Ukuran font diperbesar agar lebih jelas */
+  font-weight: bold;
+  color: white; /* Warna teks default */
+  transition: color 0.3s; /* Menambahkan transisi warna */
+}
+
+.close-btn {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.close-btn:hover {
+  background-color: #335fcc;
+}
+
+/* Pop-up pesan sementara */
+.payment-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Posisikan tepat di tengah */
+    background-color: #1d4ed8;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 2001;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Efek hilang secara perlahan setelah 3 detik */
+.payment-message.fade-out {
+    opacity: 0;
+}
